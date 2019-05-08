@@ -1,0 +1,160 @@
+﻿@model IEnumerable<MyTaskListApp.Models.NotificationPagingModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Object)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Property)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerPoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FulfillmentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditApprovedStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CancelledDateOnUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDetailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A2000StyleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A2000Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalFinishedQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SchedulerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduledDateOnUtc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrimId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrimName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsReaded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsToDo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOnUtc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Object)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Action)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerPoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FulfillmentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditApprovedStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CancelledDateOnUtc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDetailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A2000StyleId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A2000Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalFinishedQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SchedulerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduledDateOnUtc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrimId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrimName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsReaded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsToDo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOnUtc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
